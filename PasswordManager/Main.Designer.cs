@@ -28,56 +28,57 @@
         /// </summary>
         private void InitializeComponent()
         {
-            AddPassword = new Button();
-            ChangePassword = new Button();
-            RemovePassword = new Button();
-            PasswordList = new ListBox();
+            btnAddPassword = new Button();
+            btnChangePassword = new Button();
+            btnRemovePassword = new Button();
+            lsPasswordList = new ListBox();
             SuspendLayout();
             // 
-            // AddPassword
+            // btnAddPassword
             // 
-            AddPassword.Location = new Point(25, 12);
-            AddPassword.Name = "AddPassword";
-            AddPassword.Size = new Size(236, 36);
-            AddPassword.TabIndex = 0;
-            AddPassword.Text = "Add a password";
-            AddPassword.UseVisualStyleBackColor = true;
+            btnAddPassword.Location = new Point(25, 12);
+            btnAddPassword.Name = "btnAddPassword";
+            btnAddPassword.Size = new Size(236, 36);
+            btnAddPassword.TabIndex = 0;
+            btnAddPassword.Text = "Add a password";
+            btnAddPassword.UseVisualStyleBackColor = true;
+            btnAddPassword.Click += AddPassword_Click;
             // 
-            // ChangePassword
+            // btnChangePassword
             // 
-            ChangePassword.Location = new Point(277, 12);
-            ChangePassword.Name = "ChangePassword";
-            ChangePassword.Size = new Size(236, 36);
-            ChangePassword.TabIndex = 1;
-            ChangePassword.Text = "Change a password";
-            ChangePassword.UseVisualStyleBackColor = true;
+            btnChangePassword.Location = new Point(277, 12);
+            btnChangePassword.Name = "btnChangePassword";
+            btnChangePassword.Size = new Size(236, 36);
+            btnChangePassword.TabIndex = 1;
+            btnChangePassword.Text = "Change a password";
+            btnChangePassword.UseVisualStyleBackColor = true;
             // 
-            // RemovePassword
+            // btnRemovePassword
             // 
-            RemovePassword.Location = new Point(535, 12);
-            RemovePassword.Name = "RemovePassword";
-            RemovePassword.Size = new Size(236, 36);
-            RemovePassword.TabIndex = 2;
-            RemovePassword.Text = "Remove a password";
-            RemovePassword.UseVisualStyleBackColor = true;
+            btnRemovePassword.Location = new Point(535, 12);
+            btnRemovePassword.Name = "btnRemovePassword";
+            btnRemovePassword.Size = new Size(236, 36);
+            btnRemovePassword.TabIndex = 2;
+            btnRemovePassword.Text = "Remove a password";
+            btnRemovePassword.UseVisualStyleBackColor = true;
             // 
-            // PasswordList
+            // lsPasswordList
             // 
-            PasswordList.FormattingEnabled = true;
-            PasswordList.Location = new Point(25, 86);
-            PasswordList.Name = "PasswordList";
-            PasswordList.Size = new Size(746, 344);
-            PasswordList.TabIndex = 3;
+            lsPasswordList.FormattingEnabled = true;
+            lsPasswordList.Location = new Point(25, 86);
+            lsPasswordList.Name = "lsPasswordList";
+            lsPasswordList.Size = new Size(746, 344);
+            lsPasswordList.TabIndex = 3;
             // 
             // Main
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
-            Controls.Add(PasswordList);
-            Controls.Add(RemovePassword);
-            Controls.Add(ChangePassword);
-            Controls.Add(AddPassword);
+            Controls.Add(lsPasswordList);
+            Controls.Add(btnRemovePassword);
+            Controls.Add(btnChangePassword);
+            Controls.Add(btnAddPassword);
             Name = "Main";
             Text = "Password Manager";
             ResumeLayout(false);
@@ -85,9 +86,9 @@
 
         #endregion
 
-        private Button AddPassword;
-        private Button ChangePassword;
-        private Button RemovePassword;
-        private ListBox PasswordList;
+        private Button btnAddPassword;
+        private Button btnChangePassword;
+        private Button btnRemovePassword;
+       private ListBox lsPasswordList;
     }
 }
