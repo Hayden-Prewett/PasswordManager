@@ -42,7 +42,7 @@
             btnAddPassword.TabIndex = 0;
             btnAddPassword.Text = "Add a password";
             btnAddPassword.UseVisualStyleBackColor = true;
-            btnAddPassword.Click += AddPassword_Click;
+            btnAddPassword.Click += btnAddPassword_Click;
             // 
             // btnChangePassword
             // 
@@ -52,6 +52,7 @@
             btnChangePassword.TabIndex = 1;
             btnChangePassword.Text = "Change a password";
             btnChangePassword.UseVisualStyleBackColor = true;
+            btnChangePassword.Click += btnChangePassword_Click;
             // 
             // btnRemovePassword
             // 
@@ -61,6 +62,7 @@
             btnRemovePassword.TabIndex = 2;
             btnRemovePassword.Text = "Remove a password";
             btnRemovePassword.UseVisualStyleBackColor = true;
+            btnRemovePassword.Click += btnRemovePassword_Click;
             // 
             // lsPasswordList
             // 

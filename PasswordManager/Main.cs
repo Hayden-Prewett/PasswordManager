@@ -7,16 +7,23 @@ namespace PasswordManager
             InitializeComponent();
         }
 
-        void AddPassword_Click(object sender, EventArgs e)
+        void btnAddPassword_Click(object sender, EventArgs e)
         {
-            // When the AddPassword button is clicked
+            // When the Add Password button is clicked, open AddPassword form
             var AddPassword = new AddPassword();
             AddPassword.Show();
         }
 
-        private void buttonRemovePassword_Click(object sender, EventArgs e)
+        private void btnChangePassword_Click(object sender, EventArgs e)
         {
+            // When the Change Password button is clicked, open the ChangePassword form
+            // coming soon
+        }
 
+        private void btnRemovePassword_Click(object sender, EventArgs e)
+        {
+            // When the remove password button is clicked, open the RemovePassword form
+            // coming soon
         }
     }
 }
