@@ -31,7 +31,7 @@
             btnAddPassword = new Button();
             btnChangePassword = new Button();
             btnRemovePassword = new Button();
-            lsPasswordList = new ListBox();
+            lstPasswordList = new ListBox();
             SuspendLayout();
             // 
             // btnAddPassword
@@ -64,20 +64,21 @@
             btnRemovePassword.UseVisualStyleBackColor = true;
             btnRemovePassword.Click += btnRemovePassword_Click;
             // 
-            // lsPasswordList
+            // lstPasswordList
             // 
-            lsPasswordList.FormattingEnabled = true;
-            lsPasswordList.Location = new Point(25, 86);
-            lsPasswordList.Name = "lsPasswordList";
-            lsPasswordList.Size = new Size(746, 344);
-            lsPasswordList.TabIndex = 3;
+            lstPasswordList.FormattingEnabled = true;
+            lstPasswordList.Location = new Point(25, 86);
+            lstPasswordList.Name = "lstPasswordList";
+            lstPasswordList.Size = new Size(746, 344);
+            lstPasswordList.TabIndex = 3;
+            lstPasswordList.SelectedIndexChanged += lstPasswordList_SelectedIndexChanged;
             // 
             // Main
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
-            Controls.Add(lsPasswordList);
+            Controls.Add(lstPasswordList);
             Controls.Add(btnRemovePassword);
             Controls.Add(btnChangePassword);
             Controls.Add(btnAddPassword);
@@ -91,6 +92,6 @@
         private Button btnAddPassword;
         private Button btnChangePassword;
         private Button btnRemovePassword;
-       private ListBox lsPasswordList;
+       private ListBox lstPasswordList;
     }
 }

@@ -45,6 +45,7 @@
             btnApplyAddPassword.TabIndex = 0;
             btnApplyAddPassword.Text = "Apply";
             btnApplyAddPassword.UseVisualStyleBackColor = true;
+            btnApplyAddPassword.Click += btnApplyAddPassword_Click;
             // 
             // lblWebsiteName
             // 
@@ -54,7 +55,6 @@
             lblWebsiteName.Size = new Size(109, 20);
             lblWebsiteName.TabIndex = 2;
             lblWebsiteName.Text = "Website Name:";
-            lblWebsiteName.Click += label1_Click;
             // 
             // txtWebsite
             // 
@@ -70,6 +70,7 @@
             textBox1.Name = "textBox1";
             textBox1.Size = new Size(312, 27);
             textBox1.TabIndex = 5;
+            textBox1.TextChanged += txtUsername_TextChanged;
             // 
             // lblUsername
             // 
@@ -86,6 +87,7 @@
             txtPassword.Name = "txtPassword";
             txtPassword.Size = new Size(312, 27);
             txtPassword.TabIndex = 7;
+            txtPassword.TextChanged += txtPassword_TextChanged;
             // 
             // lblPassword
             // 

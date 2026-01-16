@@ -23,7 +23,13 @@ namespace PasswordManager
         private void btnRemovePassword_Click(object sender, EventArgs e)
         {
             // When the remove password button is clicked, open the RemovePassword form
-            // coming soon
+            var RemovePassword = new RemovePassword();
+            RemovePassword.Show();
+        }
+
+        private void lstPasswordList_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            // Display the password list to the user
         }
     }
 }
