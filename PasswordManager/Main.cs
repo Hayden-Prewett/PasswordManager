@@ -1,3 +1,11 @@
+///////////////////////////
+// Project Name: Password Manager
+// Author: Hayden Prewett
+// Created: 15/1/2026
+///////////////////////////
+
+using System.Data;
+
 namespace PasswordManager
 {
     public partial class Main : Form
@@ -5,6 +13,24 @@ namespace PasswordManager
         public Main()
         {
             InitializeComponent();
+            DataTable dataTable = new DataTable();
+            dataTable.Columns.Add("ID");
+            dataTable.Columns.Add("Website");
+            dataTable.Columns.Add("Username");
+            dataTable.Columns.Add("Password");
+            string filePath = "C:\\Users\\avene\\source\\repos\\Hayden-Prewett\\PasswordManager\\PasswordManager\\testDB.csv";
+
+            // initialise StreamReader file handling
+            StreamReader streamReader = new StreamReader(filePath);
+            string[] database = new string[File.ReadAllLines(filePath).Length];
+            while (!streamReader.EndOfStream)
+            {
+                // split at commas
+                database = streamReader.ReadLine().Split(',');
+                // add to datatable
+                dataTable.Rows.Add(database[0],database[1], database[2], database[3]); 
+            }
+            loginsDataGrid.DataSource = dataTable;
         }
 
         void btnAddPassword_Click(object sender, EventArgs e)
@@ -14,20 +40,15 @@ namespace PasswordManager
             AddPassword.Show();
         }
 
-        private void lstPasswordList_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            // when index selected, open LoginInfo Form
-        }
-
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
         private void btnQuit_Click(object sender, EventArgs e)
         {
             // end execution
             System.Windows.Forms.Application.Exit();
+        }
+
+        private void loginsDataGrid_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            // when a cell is clicked
         }
     }
 }

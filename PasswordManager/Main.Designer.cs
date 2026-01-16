@@ -30,9 +30,9 @@
         {
             btnAddPassword = new Button();
             lblPasswordManagerTitle = new Label();
-            dataGridView1 = new DataGridView();
             btnQuit = new Button();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            loginsDataGrid = new DataGridView();
+            ((System.ComponentModel.ISupportInitialize)loginsDataGrid).BeginInit();
             SuspendLayout();
             // 
             // btnAddPassword
@@ -49,25 +49,15 @@
             // 
             lblPasswordManagerTitle.AutoSize = true;
             lblPasswordManagerTitle.Font = new Font("Segoe UI", 15F);
-            lblPasswordManagerTitle.Location = new Point(284, 30);
+            lblPasswordManagerTitle.Location = new Point(177, 19);
             lblPasswordManagerTitle.Name = "lblPasswordManagerTitle";
             lblPasswordManagerTitle.Size = new Size(226, 35);
             lblPasswordManagerTitle.TabIndex = 4;
             lblPasswordManagerTitle.Text = "Password Manager";
             // 
-            // dataGridView1
-            // 
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(12, 92);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.RowHeadersWidth = 51;
-            dataGridView1.Size = new Size(759, 292);
-            dataGridView1.TabIndex = 5;
-            dataGridView1.CellContentClick += dataGridView1_CellContentClick;
-            // 
             // btnQuit
             // 
-            btnQuit.Location = new Point(535, 402);
+            btnQuit.Location = new Point(319, 402);
             btnQuit.Name = "btnQuit";
             btnQuit.Size = new Size(236, 36);
             btnQuit.TabIndex = 7;
@@ -75,18 +65,28 @@
             btnQuit.UseVisualStyleBackColor = true;
             btnQuit.Click += btnQuit_Click;
             // 
+            // loginsDataGrid
+            // 
+            loginsDataGrid.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            loginsDataGrid.Location = new Point(12, 68);
+            loginsDataGrid.Name = "loginsDataGrid";
+            loginsDataGrid.RowHeadersWidth = 51;
+            loginsDataGrid.Size = new Size(555, 303);
+            loginsDataGrid.TabIndex = 8;
+            loginsDataGrid.CellContentClick += loginsDataGrid_CellContentClick;
+            // 
             // Main
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(608, 450);
+            Controls.Add(loginsDataGrid);
             Controls.Add(btnQuit);
-            Controls.Add(dataGridView1);
             Controls.Add(lblPasswordManagerTitle);
             Controls.Add(btnAddPassword);
             Name = "Main";
             Text = "Password Manager";
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)loginsDataGrid).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -94,7 +94,7 @@
         #endregion
         private Button btnAddPassword;
         private Label lblPasswordManagerTitle;
-        private DataGridView dataGridView1;
         private Button btnQuit;
+        private DataGridView loginsDataGrid;
     }
 }
