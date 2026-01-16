@@ -14,22 +14,20 @@ namespace PasswordManager
             AddPassword.Show();
         }
 
-        private void btnChangePassword_Click(object sender, EventArgs e)
-        {
-            // When the Change Password button is clicked, open the ChangePassword form
-            // coming soon
-        }
-
-        private void btnRemovePassword_Click(object sender, EventArgs e)
-        {
-            // When the remove password button is clicked, open the RemovePassword form
-            var RemovePassword = new RemovePassword();
-            RemovePassword.Show();
-        }
-
         private void lstPasswordList_SelectedIndexChanged(object sender, EventArgs e)
         {
-            // Display the password list to the user
+            // when index selected, open LoginInfo Form
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void btnQuit_Click(object sender, EventArgs e)
+        {
+            // end execution
+            System.Windows.Forms.Application.Exit();
         }
     }
 }

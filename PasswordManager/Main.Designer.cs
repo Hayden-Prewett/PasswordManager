@@ -29,69 +29,72 @@
         private void InitializeComponent()
         {
             btnAddPassword = new Button();
-            btnChangePassword = new Button();
-            btnRemovePassword = new Button();
-            lstPasswordList = new ListBox();
+            lblPasswordManagerTitle = new Label();
+            dataGridView1 = new DataGridView();
+            btnQuit = new Button();
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
             // btnAddPassword
             // 
-            btnAddPassword.Location = new Point(25, 12);
+            btnAddPassword.Location = new Point(12, 402);
             btnAddPassword.Name = "btnAddPassword";
-            btnAddPassword.Size = new Size(236, 36);
+            btnAddPassword.Size = new Size(202, 36);
             btnAddPassword.TabIndex = 0;
             btnAddPassword.Text = "Add a password";
             btnAddPassword.UseVisualStyleBackColor = true;
             btnAddPassword.Click += btnAddPassword_Click;
             // 
-            // btnChangePassword
+            // lblPasswordManagerTitle
             // 
-            btnChangePassword.Location = new Point(277, 12);
-            btnChangePassword.Name = "btnChangePassword";
-            btnChangePassword.Size = new Size(236, 36);
-            btnChangePassword.TabIndex = 1;
-            btnChangePassword.Text = "Change a password";
-            btnChangePassword.UseVisualStyleBackColor = true;
-            btnChangePassword.Click += btnChangePassword_Click;
+            lblPasswordManagerTitle.AutoSize = true;
+            lblPasswordManagerTitle.Font = new Font("Segoe UI", 15F);
+            lblPasswordManagerTitle.Location = new Point(284, 30);
+            lblPasswordManagerTitle.Name = "lblPasswordManagerTitle";
+            lblPasswordManagerTitle.Size = new Size(226, 35);
+            lblPasswordManagerTitle.TabIndex = 4;
+            lblPasswordManagerTitle.Text = "Password Manager";
             // 
-            // btnRemovePassword
+            // dataGridView1
             // 
-            btnRemovePassword.Location = new Point(535, 12);
-            btnRemovePassword.Name = "btnRemovePassword";
-            btnRemovePassword.Size = new Size(236, 36);
-            btnRemovePassword.TabIndex = 2;
-            btnRemovePassword.Text = "Remove a password";
-            btnRemovePassword.UseVisualStyleBackColor = true;
-            btnRemovePassword.Click += btnRemovePassword_Click;
+            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView1.Location = new Point(12, 92);
+            dataGridView1.Name = "dataGridView1";
+            dataGridView1.RowHeadersWidth = 51;
+            dataGridView1.Size = new Size(759, 292);
+            dataGridView1.TabIndex = 5;
+            dataGridView1.CellContentClick += dataGridView1_CellContentClick;
             // 
-            // lstPasswordList
+            // btnQuit
             // 
-            lstPasswordList.FormattingEnabled = true;
-            lstPasswordList.Location = new Point(25, 86);
-            lstPasswordList.Name = "lstPasswordList";
-            lstPasswordList.Size = new Size(746, 344);
-            lstPasswordList.TabIndex = 3;
-            lstPasswordList.SelectedIndexChanged += lstPasswordList_SelectedIndexChanged;
+            btnQuit.Location = new Point(535, 402);
+            btnQuit.Name = "btnQuit";
+            btnQuit.Size = new Size(236, 36);
+            btnQuit.TabIndex = 7;
+            btnQuit.Text = "Quit";
+            btnQuit.UseVisualStyleBackColor = true;
+            btnQuit.Click += btnQuit_Click;
             // 
             // Main
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
-            Controls.Add(lstPasswordList);
-            Controls.Add(btnRemovePassword);
-            Controls.Add(btnChangePassword);
+            Controls.Add(btnQuit);
+            Controls.Add(dataGridView1);
+            Controls.Add(lblPasswordManagerTitle);
             Controls.Add(btnAddPassword);
             Name = "Main";
             Text = "Password Manager";
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
-
         private Button btnAddPassword;
-        private Button btnChangePassword;
-        private Button btnRemovePassword;
-       private ListBox lstPasswordList;
+        private Label lblPasswordManagerTitle;
+        private DataGridView dataGridView1;
+        private Button btnQuit;
     }
 }
